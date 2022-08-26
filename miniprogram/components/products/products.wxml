@@ -1,0 +1,5 @@
+<view class="productsContainer">
+  <product class="product" wx:for="{{info}}" wx:key="_id" wx:for-item="product" info="{{product}}">
+  </product>
+  <noInfo class="product" wx:if="{{info.length===0}}" text="{{'暂无产品'}}"></noInfo>
+</view>

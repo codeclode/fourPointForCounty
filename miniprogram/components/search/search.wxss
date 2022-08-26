@@ -1,0 +1,38 @@
+/* components/search/search.wxss */
+.searchContainer{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  border-radius: 50rpx;
+  border: rgb(151, 151, 151) 1rpx solid;
+}
+
+.searchContainer input{
+  height: 80rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 1.5em;
+}
+
+.buttonContainer{
+  width: 100%;
+  height: 100%;
+}
+
+.buttonContainer button{
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  padding: 0;
+  line-height: 80rpx;
+  border-radius: 50rpx;
+  background-color: rgb(212, 211, 211);
+  color: rgb(99, 98, 98);
+  transition: 0.3s ease all;
+}
+
+.buttonContainer .activeButton{
+  background-color: rgb(78, 78, 78) ;
+  color: snow;
+  transition: 0.3s ease all;
+}

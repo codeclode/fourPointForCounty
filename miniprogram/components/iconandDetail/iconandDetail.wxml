@@ -1,0 +1,5 @@
+<!--components/iconandDetail/iconandDetail.wxml-->
+<view class="iconAndDetailContainer" bindtap="goTo">
+  <view class="icon-{{imgAndDetail.iconName}} iconfont icon"></view>
+  <view class="detail">{{imgAndDetail.detail}}</view>
+</view>

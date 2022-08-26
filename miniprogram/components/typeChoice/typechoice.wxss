@@ -1,0 +1,19 @@
+
+.typeContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh 0;
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  background-color: snow;
+  transition:all 0.5s ease;
+}
+
+.active{
+  background-color: rgb(224, 224, 224);
+  transition: 0.5s ease all;
+  border-left: 4rpx solid red;
+}

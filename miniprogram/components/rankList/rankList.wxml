@@ -1,0 +1,12 @@
+<view>
+  <view wx:for="{{userList}}" wx:key="index" class="userContainer" wx:for-item="user">
+    <view class="rank">{{index+1}}</view>
+    <view class="imageContainer">
+      <image src="{{user.avatarUrl}}"></image>
+    </view>
+    <view class="userInfo">
+      <view>{{user.nickName}}</view>
+      <view>{{user.donateScore}}分</view>
+    </view>
+  </view>
+</view>

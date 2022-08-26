@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "product":"/components/product/product",
+    "noInfo": "/components/noInfo/noInfo"
+  }
+}

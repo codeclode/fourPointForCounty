@@ -1,0 +1,77 @@
+/* pages/donateForm/donateForm.wxss */
+.donateTitle {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.inputGroup {
+  font-size: 2em;
+  display: grid;
+  grid-template-columns: 4em 6fr;
+  align-items: center;
+  gap: 5%;
+  border-bottom: gray 1rpx solid;
+  padding: 10rpx 0;
+}
+
+.inputContainer {
+  height: 100%;
+}
+
+.bigInputContainer {
+  font-size: 2em;
+  border-bottom: gray 1rpx solid;
+  padding: 20rpx 0;
+}
+
+.introduceTitle {
+  text-align: center;
+}
+
+.bigInputContainer textarea {
+  margin: auto;
+  border: 1rpx grey solid;
+}
+
+.inputLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.picUpload {
+  font-size: 2em;
+}
+
+.pics {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 1fr;
+  gap: 0 5%;
+}
+
+.picContainer {
+  margin: 1vh 0;
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+}
+
+.picContainer image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.successContainer {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-100%);
+}
+
+.donateAgain {
+  text-align: center;
+  font-size: 1.5em;
+}

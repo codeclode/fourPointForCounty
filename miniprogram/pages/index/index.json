@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "product":"/components/product/product",
+    "activities":"/components/activities/activities",
+    "ranklist":"/components/rankList/rankList"
+  }
+}

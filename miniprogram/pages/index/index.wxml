@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{false}}">
+  <view slot="content">首页</view>
+</cu-custom>
+<view class="indexContainer">
+  <swiper interval="3000" autoplay="true" circular="true" class="itemContainer">
+    <swiper-item wx:for="{{swpierItems}}" wx:key="index" wx:for-item="item">
+      <image src="{{item.imgSrc}}"></image>
+      <view class="text">{{item.text}}</view>
+    </swiper-item>
+  </swiper>
+  <view class="itemContainer">
+    <view class="information">
+      <view class="itemInfo">精选商品</view>
+      <view class="more" bindtap="goTab" data-value="/pages/shop/shop">更多</view>
+    </view>
+    <scroll-view scroll-x="true" scroll-with-animation="true">
+      <view class="productsContainer">
+        <product wx:for="{{products}}" wx:for-item="item" wx:key="index" class="productContainer" info="{{item}}"></product>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="itemContainer">
+    <view class="information">
+      <view class="itemInfo">校园活动</view>
+      <view bindtap="goTab" data-value="/pages/school/school" class="more">更多</view>
+    </view>
+    <scroll-view scroll-x="true">
+      <view class="activitiesContainer">
+        <view bindtap="switchPage" data-type="activity" data-value="{{item._id}}" class="activityContain" wx:for="{{activitiesList}}" wx:for-item="item" wx:key="index">
+          <view class="picContainer">
+            <image class="activityImg" src="{{item.imgsURL[0]}}"></image>
+          </view>
+          <view class="textContainer activityName">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="itemContainer">
+    <view class="information">
+      <view class="itemInfo">捐赠排名</view>
+      <view class="more" bindtap="goTab" data-value="/pages/donate/donate">更多</view>
+    </view>
+    <scroll-view class="userRank" scroll-y="true">
+      <ranklist userList="{{userList}}"></ranklist>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+<!--pages/sale/sale.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="backText" style="width: 138rpx; height: 40rpx; display: block; box-sizing: border-box">返回</view>
+  <view slot="content">货物出售</view>
+</cu-custom>
+<view wx:if="{{!submitSuccess}}" style="margin-bottom: 5vh;">
+  <form>
+    <view class="saleTitle">有货要卖</view>
+    <label class="inputGroup">
+      <view class="inputLabel">商品名称</view>
+      <input value="{{name}}" class="inputContainer" bindinput="getField" data-field="name" type="text" />
+    </label>
+    <label class="inputGroup">
+      <view class="inputLabel">商品产地</view>
+      <input value="{{place}}" type="text" bindinput="getField" data-field="place" class="inputContainer" />
+    </label>
+    <view class="saleWays">
+      <view class="waysTitle">
+        <view>售卖渠道（{{ways.length}}/5）</view>
+        <button bindtap="deleteWay">删除最后一个渠道</button>
+      </view>
+      <label wx:for="{{ways}}" wx:for-item="way" class="inputGroup">
+        <input value="{{way.wayName}}" bindinput="updateWayName" data-index="{{index}}" type="text" placeholder="填写渠道" class="inputContainer" />
+        <input value="{{way.wayDetail}}" bindinput="updateWayDetail" data-index="{{index}}" type="text" placeholder="填写渠道内容" class="inputContainer" />
+      </label>
+      <button bindtap="addWay" type="primary" style="margin-top: 2vh;">添加出售渠道</button>
+    </view>
+    <view class="tagsContainer">
+      <button bindtap="addTag">添加商品标签</button>
+      <view class="tags">
+        <view bindtap="deleteTag" data-index="{{index}}" wx:for="{{tags}}" wx:for-item="tag" class="tagContainer">{{tag}}</view>
+      </view>
+    </view>
+    <view class="bigInputContainer" data-field="name">
+      <view class="introduceTitle">物品描述</view>
+      <textarea value="{{introduce}}" placeholder="最多200字" maxlength="201" bindinput="getField" data-field="introduce">
+      </textarea>
+    </view>
+    <view class="picUpload">
+      <view class="inputLabel">
+        <view>图片上传（点击删除）</view>
+        <view>{{imgsURL.length}}/9</view>
+      </view>
+      <view class="pics">
+        <view bindtap="deleteImg" data-index="{{index}}" wx:for="{{imgsURL}}" wx:for-item="img" class="picContainer">
+          <image src="{{img}}"></image>
+        </view>
+        <view bindtap="addImg" class="picContainer" wx:if="{{imgsURL.length<9}}">
+          <image src="/static/img/addPic.png"></image>
+        </view>
+      </view>
+    </view>
+    <button form-type="submit" disabled="{{loading}}" type="{{loading?'default':'primary'}}" bindtap="submit">{{loading?'请稍后':'提交'}}</button>
+  </form>
+</view>
+<view wx:else class="successContainer">
+  <view>提交成功</view>
+  <button bindtap="lookMyProduct" type="primary">查看我的商品</button>
+</view>

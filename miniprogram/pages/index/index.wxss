@@ -1,0 +1,104 @@
+/**index.wxss**/
+
+.indexContainer{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+swiper{
+  border-radius: 10px ;
+  overflow: hidden;
+  margin: 0 5%;
+}
+
+swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+
+swiper-item .text{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  color: snow;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.information{
+  margin: 1vh 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemInfo{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.more{
+  border: gray 1px solid;
+  border-radius: 20px;
+  padding: 0 30px;
+  font-size: 1.2em;
+  background-color: #fff;
+}
+
+.itemContainer:nth-of-type(n+1){
+  border-top: 1px solid rgba(73, 73, 73,0.5);
+  margin-top: 1vh;
+  padding:0 3%;
+}
+
+.productsContainer{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.productContainer{
+  width: 90vw;
+  border-bottom: 1rpx gray dotted;
+  padding: 2%;
+}
+
+.activitiesContainer{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr;
+  gap: 20rpx;
+}
+.activityContain{
+  width: 30vw;
+  margin: 0 5%;
+  text-align: center;
+}
+
+.picContainer{
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.activityContain image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+.activityContain .activityName{
+  -webkit-line-clamp: 2;
+  font-size: 1.1em;
+}
+
+.userRank{
+  height: 50vh;
+}
+

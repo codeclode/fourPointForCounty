@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "activities":"/components/activities/activities",
+    "search":"/components/search/search",
+    "noInfo":"/components/noInfo/noInfo"
+  }
+}

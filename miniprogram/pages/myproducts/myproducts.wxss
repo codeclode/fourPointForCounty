@@ -1,0 +1,20 @@
+/* pages/myproducts/myproducts.wxss */
+.productContainer {
+  margin: 2vh 0;
+  box-sizing: content-box;
+  border: 1rpx solid grey;
+  padding: 2vh;
+  display: grid;
+  gap: 5%;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.deleteButton {
+  background-color: #eb3941 !important;
+  color: snow !important;
+}

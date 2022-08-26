@@ -1,0 +1,14 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{false}}">
+  <view slot="content">捐赠</view>
+</cu-custom>
+<view class="donateContainer">
+  <userinfo class="ItemContainer"></userinfo>
+  <iconandDetail bindtap="{{!item.url?'contact':''}}" class="ItemContainer" wx:for="{{items}}" wx:key="detail" wx:for-item="item" imgAndDetail="{{item}}"></iconandDetail>
+  <page-container round="true" show="{{showContact}}">
+    <view class="contactContainer">
+    <view>开发团队：做的都队</view>
+    <view>电话联系我们：13853849013</view>
+    <view>来自：西安电子科技大学XDU~</view>
+    </view>
+  </page-container>
+</view>

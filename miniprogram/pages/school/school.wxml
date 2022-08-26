@@ -1,0 +1,14 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{false}}">
+  <view slot="content">校园</view>
+</cu-custom>
+<view class="schoolContainer">
+  <search class="searchContainer" bind:search="search" placeholder="搜索学校或活动名"></search>
+  <swiper wx:if="{{!searched}}" circular="true" autoplay="true" indicator-dots="true" indicator-color="rgba(0,0,0,0.5)" indicator-active-color="rgba(68, 136, 253,0.5)">
+    <swiper-item wx:for="{{swiperItems}}" wx:for-item="item" wx:key="index" class="swiperContainer">
+      <image src="{{item.imgsURL[0]}}"></image>
+      <view class="introduceContainer">{{item.name}}</view>
+    </swiper-item>
+  </swiper>
+  <activities activitiesList="{{activitiesList}}" class="activitiesContainer"></activities>
+  <noInfo wx:if="{{activitiesList.length===0}}"  text="{{'暂无活动'}}"></noInfo>
+</view>

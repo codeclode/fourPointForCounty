@@ -1,0 +1,22 @@
+/* pages/shop/shop.wxss */
+.productsContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-color: rgb(224, 224, 224);
+}
+
+.productsList,
+.typeList {
+  height: 82vh;
+}
+
+.typeList {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.searchContainer {
+  width: 100%;
+  margin: 3%;
+}

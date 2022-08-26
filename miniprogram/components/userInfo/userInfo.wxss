@@ -1,0 +1,36 @@
+/* components/userInfo/userInfo.wxss */
+.userContainer{
+  display: grid;
+  grid-template-columns: 200rpx 3fr;
+  column-gap: 2%;
+}
+
+.userContainer image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 5%;
+}
+
+.informationContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.informationContainer .name{
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.informationContainer view{
+  overflow: hidden;
+  word-wrap:break-word;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.donateScore,.rank{
+  font-size: 1.1em;
+  color: rgb(151, 151, 151);
+}

@@ -1,0 +1,22 @@
+/* pages/donate/donate.wxss */
+.donateContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 0 2%;
+}
+
+.ItemContainer{
+  padding: 14rpx;
+  border: rgba(128, 128, 128, 0.521) 1rpx solid;
+  border-radius: 3px;
+  box-shadow: skyblue 0px 0px 10rpx;
+  margin: 2% 0;
+}
+
+.contactContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5em;
+}

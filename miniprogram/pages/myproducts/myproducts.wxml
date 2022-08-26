@@ -1,0 +1,14 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="backText" style="width: 138rpx; height: 40rpx; display: block; box-sizing: border-box">返回</view>
+  <view slot="content">我的商品</view>
+</cu-custom>
+<view>
+  <view class="productContainer" wx:for="{{products}}" wx:for-item="product" wx:key="id">
+    <product class="productDetail" info="{{product}}"></product>
+    <view class="buttonContainer">
+      <button size="mini" bindtap="delete" data-id="{{product._id}}" class="deleteButton" type="default">删除</button>
+      <button size="mini" bindtap="update" type="primary" data-id="{{product._id}}" class="updateButton">修改</button>
+    </view>
+  </view>
+  <noInfo wx:if="{{products.length===0}}" text="暂无商品"></noInfo>
+</view>

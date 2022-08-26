@@ -1,0 +1,43 @@
+<!--pages/donateForm/donateForm.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="backText" style="width: 138rpx; height: 40rpx; display: block; box-sizing: border-box">返回</view>
+  <view slot="content">物品捐赠</view>
+</cu-custom>
+<view style="margin-bottom: 5vh;">
+  <form wx:if="{{submitSuccess===false}}">
+    <view class="donateTitle">捐赠我的物品</view>
+    <label class="inputGroup">
+      <view class="inputLabel">物品名称</view>
+      <input class="inputContainer" bindinput="getField" data-field="name" type="text" />
+    </label>
+    <label class="inputGroup">
+      <view class="inputLabel">您的地址</view>
+      <input type="text" bindinput="getField" data-field="place" class="inputContainer" />
+    </label>
+    <view class="bigInputContainer" data-field="name">
+      <view class="introduceTitle">物品描述</view>
+      <textarea placeholder="最多200字" maxlength="201" bindinput="getField" data-field="introduce">
+      </textarea>
+    </view>
+    <view class="picUpload">
+      <view class="inputLabel">
+        <view>图片上传（点击删除）</view>
+        <view>{{imgs.length}}/9</view>
+      </view>
+      <view class="pics">
+        <view bindtap="deleteImg" data-index="{{index}}" wx:for="{{imgs}}" wx:for-item="img" class="picContainer">
+          <image src="{{img}}"></image>
+        </view>
+        <view bindtap="addImg" class="picContainer" wx:if="{{imgs.length<9}}">
+          <image src="/static/img/addPic.png"></image>
+        </view>
+      </view>
+    </view>
+    <button form-type="submit" disabled="{{loading}}" bindtap="submit">{{loading?"请稍后":"提交"}}</button>
+  </form>
+  <form wx:else class="successContainer">
+    <view class="donateAgain">提交成功！</view>
+    <view class="donateAgain">请您耐心等待我们与您联系</view>
+    <button bindtap="submitAgain" type="primary">再次捐赠</button>
+  </form>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "rankList":"/components/rankList/rankList",
+    "userInfo":"/components/userInfo/userInfo"
+  }
+}

@@ -1,0 +1,83 @@
+view {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.activityContainer{
+  margin-bottom: 15vh;
+}
+
+swiper swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+swiper {
+  width: 100%;
+}
+
+.informationContainer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 2vh;
+  border-top: 1rpx rgba(143, 140, 140, 0.5) solid;
+  text-indent: 2%;
+}
+
+.informationContainer view{
+  width: 100%;
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: 600;
+  -webkit-line-clamp: 2;
+}
+
+.time{
+  color: rgb(116, 116, 116);
+}
+
+.teacher{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+/* 底部操作框 */
+.operaters {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20%;
+  border-top: 1px solid skyblue;
+  background-color: #fff;
+}
+
+.operaters view {
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.reportButton {
+  border: 1rpx solid red;
+  background-color: #d35555;
+  color: snow;
+}
+
+.inpartedButton {
+  border: 1rpx solid rgb(255, 255, 255);
+  background-color: rgb(189, 189, 189);
+  color: white;
+}
+
+.inpartButton {
+  border: gold;
+  background-color: rgb(240, 207, 21);
+  color: white;
+}

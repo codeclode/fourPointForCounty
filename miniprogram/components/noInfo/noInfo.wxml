@@ -1,0 +1,6 @@
+<view class="noInfo">
+  <view class="imgContainer">
+    <image src="../../static/img/noInfo.png"></image>
+  </view>
+  <view>{{text}}</view>
+</view>

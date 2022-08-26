@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{false}}">
+  <view slot="content">商品</view>
+</cu-custom>
+<view class="container" style="display: flex; box-sizing: border-box">
+  <search class="searchContainer" bind:search="search" placeholder="查询商品"></search>
+  <view class="productsContainer">
+    <typechoice bind:changeType="changeType" class="typeList" types="{{types}}"></typechoice>
+    <scroll-view bindscrolltolower="{{keyword!==''||type!==''?'searchProducts':'loadMore'}}" scroll-y="true" class="productsList">
+      <products info="{{products}}"></products>
+    </scroll-view>
+  </view>
+</view>

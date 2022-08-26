@@ -1,0 +1,119 @@
+/* pages/productDetail/productDetail.wxss */
+view{
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.productContainer{
+  margin-bottom: 15vh;
+}
+
+/* swiper */
+swiper swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+swiper {
+  width: 100%;
+  height: 75vw;
+}
+
+/* 商品信息 */
+.information {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-indent: 3%;
+}
+
+
+.name {
+  font-size: 2em;
+  font-weight: 300;
+  -webkit-line-clamp: 2;
+}
+
+.from{
+  font-size: 1.5em;
+  -webkit-line-clamp: 2;
+}
+
+.tags{
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow:scroll;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 2%;
+  background-color: rgba(155, 155, 155, 0.486);
+  color: snow;
+  padding: 3rpx;
+  border-radius: 5rpx;
+}
+
+.waysContainer{
+  font-size: 2em;
+  width: 100%;
+  border-top: 1rpx dotted rgb(202, 184, 184);
+  box-sizing: border-box;
+  margin-top: 1vh;
+}
+
+.waysTitle{
+  font-weight: 600;
+}
+
+.wayContainer{
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  align-items: center;
+  border-bottom: rgba(155, 155, 155, 0.486) 1px solid;
+  font-size: 1.1em;
+}
+
+.wayContainer .shop,.wayDetail{
+  overflow: scroll;
+  font-size: 0.8em;
+  border-right: rgba(155, 155, 155, 0.486) 1px solid;
+}
+
+/* 底部操作框 */
+.operaters {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20%;
+  border-top: 1px solid skyblue;
+  background-color: #fff;
+}
+
+.operaters view {
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.reportButton {
+  border: 1rpx solid red;
+  background-color: #d35555;
+  color: snow;
+}
+
+.collectedButton {
+  border: 1rpx solid rgb(255, 255, 255);
+  background-color: rgb(189, 189, 189);
+  color: white;
+}
+
+.collectButton {
+  border: gold;
+  background-color: rgb(240, 207, 21);
+  color: white;
+}

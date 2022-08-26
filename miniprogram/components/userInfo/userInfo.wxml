@@ -1,0 +1,12 @@
+<!--components/userInfo/userInfo.wxml-->
+<view>
+  <button wx:if="{{!logined}}" bindtap="getUserInfo" type="primary">登录</button>
+  <view wx:else class="userContainer">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view class="informationContainer">
+      <view class="name">{{userInfo.nickName}}</view>
+      <view class="donateScore">我的捐赠积分：{{userInfo.donateScore}}分</view>
+      <view class="rank">捐赠分排名：第{{userInfo.rank}}名</view>
+    </view>
+  </view>
+</view>

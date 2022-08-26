@@ -1,0 +1,38 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="backText" style="width: 138rpx; height: 40rpx; display: block; box-sizing: border-box">返回</view>
+  <view slot="content">商品详情</view>
+</cu-custom>
+<view class="productContainer">
+  <swiper circular="true" indicator-dots="true" indicator-color="grey" indicator-active-color="green">
+    <swiper-item wx:for="{{productInfo.imgsURL}}" wx:key="index" wx:for-item="img">
+      <image src="{{img}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="information">
+    <view class="name textContainer">
+      {{productInfo.name}}
+    </view>
+    <view class="from textContainer">
+      产自：{{productInfo.place}}
+    </view>
+    <view scroll-x="true" class="tags">
+      <view class="tag" wx:for="{{productInfo.tags}}" wx:key="index" wx:for-item="tag">
+        {{tag}}
+      </view>
+    </view>
+    <view class="waysContainer">
+      <view class="waysTitle">购买渠道</view>
+      <view class="wayContainer" wx:for="{{productInfo.ways}}" wx:key="wayName" wx:for-item="way">
+        <view class="shop textContainer">{{way.wayName}}</view>
+        <view class="wayDetail textContainer">{{way.wayDetail}}</view>
+      </view>
+    </view>
+    <view style="width: 100%;">
+      产品介绍：{{productInfo.introduce}}
+    </view>
+  </view>
+  <view class="operaters">
+    <view class="reportButton" bindtap="report">举报</view>
+    <view bindtap="collect" class="{{productInfo.isCollected?'collectedButton':'collectButton'}}">{{productInfo.isCollected?"已":''}}收藏</view>
+  </view>
+</view>

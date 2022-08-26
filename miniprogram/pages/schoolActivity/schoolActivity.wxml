@@ -1,0 +1,26 @@
+<!--pages/schoolActivity/schoolActivity.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="backText" style="width: 138rpx; height: 40rpx; display: block; box-sizing: border-box">返回</view>
+  <view slot="content">校园</view>
+</cu-custom>
+<view class="activityContainer">
+  <swiper circular="true" indicator-dots="true" indicator-color="grey" indicator-active-color="green">
+    <swiper-item wx:for="{{activityInfo.imgsURL}}" wx:key="index" wx:for-item="img">
+      <image src="{{img}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="informationContainer">
+    <view class="name textContainer">{{activityInfo.name}}</view>
+    <view class="time">开始时间：{{activityInfo.startTime}}</view>
+    <view class="time">结束时间：{{activityInfo.endTime}}</view>
+    <view class="school">举办学校：{{activityInfo.school}}</view>
+    <view class="peopleNumber">当前人数：{{activityInfo.personNumber}}/{{activityInfo.maxPersonNumber}}</view>
+    <view class="teacher">指导老师：{{activityInfo.teacher}}</view>
+    <view class="phone">联系电话：{{activityInfo.phone}}</view>
+    <view class="intrudoce">活动介绍：{{activityInfo.introduce}}</view>
+  </view>
+  <view class="operaters">
+    <view class="reportButton" bindtap="report">举报</view>
+    <view bindtap="inpart" class="{{inparted?'inpartedButton':'inpartButton'}}">{{inparted?"已":''}}报名</view>
+  </view>
+</view>

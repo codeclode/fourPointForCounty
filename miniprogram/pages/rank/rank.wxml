@@ -1,0 +1,12 @@
+<!--pages/rank/rank.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="backText" style="width: 138rpx; height: 40rpx; display: block; box-sizing: border-box">返回</view>
+  <view slot="content">捐赠榜单</view>
+</cu-custom>
+<view>
+  <view class="userInfoContainer">
+    <userInfo></userInfo>
+  </view>
+  <rankList userList="{{userList}}"></rankList>
+  <view class="loadmore" wx:if="{{userList.length<=100&&!overed}}" bindtap="loadMore">加载更多</view>
+</view>

@@ -1,0 +1,19 @@
+<view class="container activitiesContainer">
+  <view bindtap="gotoDetail" data-activityID="{{activity._id}}" wx:for="{{activitiesList}}" wx:for-item="activity" wx:key="index" class="activitieContainer">
+    <view class="imgContainer">
+      <image mode="scaleToFill" src="{{activity.imgsURL[0]}}"></image>
+    </view>
+    <view class="text">
+      <view class="name">{{activity.name}}</view>
+      <view class="school {{activity.schoolColor}}">举办学校：{{activity.school}}</view>
+      <view class="time">时间：{{activity.startTime}}到 {{activity.endTime}}</view>
+      <view class="progress-box" wx:if="{{activity.state}}">
+        <view class="peopleContainer">
+          <view>当前人数：{{activity.personNumber}}人</view>
+          <view>最大人数：{{activity.maxPersonNumber}}人</view>
+        </view>
+        <progress duration="10" backgroundColor="#c7c7c7" percent="{{activity.state*100}}" active stroke-width="6" border-radius="3" />
+      </view>
+    </view>
+  </view>
+</view>

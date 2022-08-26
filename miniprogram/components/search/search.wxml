@@ -1,0 +1,7 @@
+<!--components/search/search.wxml-->
+<view class="container searchContainer">
+  <input type="text" bindinput="changeKeyWord" placeholder="{{placeholder}}" />
+  <view class="buttonContainer ">
+    <button class="{{active?'activeButton':''}}" bindtap="search">搜索</button>
+  </view>
+</view>

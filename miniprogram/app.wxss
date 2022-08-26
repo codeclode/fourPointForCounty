@@ -1,0 +1,27 @@
+/**app.wxss**/
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+@import "/static/style/iconfont.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.wx-progress-inner-bar {
+  border-radius: 12rpx !important;
+  background:linear-gradient(to left, #ff0844 0%, #ffb199 100%);
+}
+
+.textContainer{
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

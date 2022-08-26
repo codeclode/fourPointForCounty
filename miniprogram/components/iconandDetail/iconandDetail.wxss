@@ -1,0 +1,21 @@
+@import "/static/style/iconfont.wxss";
+.iconAndDetailContainer{
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  align-items: center;
+  font-size: 2em;
+  gap: 5%;
+}
+
+.icon{
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.detail{
+  overflow: hidden;
+  width: 85%;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+}

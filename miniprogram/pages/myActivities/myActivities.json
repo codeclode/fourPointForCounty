@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "activities": "/components/activities/activities",
+    "noInfo": "/components/noInfo/noInfo"
+  }
+}

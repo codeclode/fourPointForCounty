@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "userinfo":"/components/userInfo/userInfo",
+    "iconandDetail":"/components/iconandDetail/iconandDetail"
+  }
+}

@@ -1,0 +1,8 @@
+<!--components/typeChoice/typechoice.wxml-->
+<view >
+  <scroll-view class="typesContainer">
+    <view wx:for="{{types}}" wx:key="index" bindtap="changeType" data-value="{{item}}" class="typeContainer {{item===activeItem?'active':''}}">
+      {{item}}
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "products":"/components/products/products",
+    "typechoice":"/components/typeChoice/typechoice",
+    "search":"/components/search/search"
+  },
+  "enablePullDownRefresh": true
+}

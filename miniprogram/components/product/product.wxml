@@ -1,0 +1,13 @@
+<view class="productContainer" bindtap="gotoDetail">
+  <view class="imageContainer">
+    <image src="{{info.imgsURL[0]}}"></image>
+  </view>
+  <view class="text">
+    <view class="name textContainer">商品：{{info.name}}</view>
+    <view scroll-x="true" class="tags">
+      <view class="tag" wx:for="{{info.ways}}" wx:key="_id" wx:for-item="way">{{way.wayName}}</view>
+      <view class="tag" wx:for="{{info.tags}}" wx:key="_id" wx:for-item="tag">{{tag}}</view>
+    </view>
+    <view class="from textContainer">产地：{{info.place}}</view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+/* pages/myActivities/myActivities.wxss */
+.pageContainer{
+  margin: 1vh;
+}

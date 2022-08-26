@@ -1,0 +1,44 @@
+.schoolContainer{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1vh;
+  padding-top: 1vh;
+  padding:1vh 1vw;
+}
+
+swiper{
+  border-radius: 25rpx ;
+  overflow: hidden;
+}
+
+.swiperContainer image{
+  width: 100%;
+  height: 100%;
+}
+
+.swiperContainer{
+  position: relative;
+}
+
+.swiperContainer .introduceContainer{
+  width: 100%;
+  position:absolute;
+  bottom: 0;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: rgba(0,0,0,0.6);
+  padding: 0 5%;
+  font-size: 1.5em;
+  color: snow;
+}
+
+.activitiesContainer{
+  width: 100%;
+}
+
+.searchContainer{
+  width: 100%;
+}

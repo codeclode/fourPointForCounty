@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "components/products/products",
+    "pages/school/school",
+    "pages/donate/donate",
+    "pages/shop/shop",
+    "pages/productDetail/productDetail",
+    "pages/schoolActivity/schoolActivity",
+    "pages/donateForm/donateForm",
+    "pages/myActivities/myActivities",
+    "pages/rank/rank",
+    "pages/sale/sale",
+    "pages/myproducts/myproducts"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/img/index.png",
+        "selectedIconPath": "/static/img/select-index.png"
+      },
+      {
+        "pagePath": "pages/school/school",
+        "text": "校园",
+        "iconPath": "/static/img/school.png",
+        "selectedIconPath": "/static/img/select-school.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商品",
+        "iconPath": "/static/img/shop.png",
+        "selectedIconPath": "/static/img/select-shop.png"
+      },
+      {
+        "pagePath": "pages/donate/donate",
+        "text": "捐赠及其他",
+        "iconPath": "/static/img/donate.png",
+        "selectedIconPath": "/static/img/select-donate.png"
+      }
+    ],
+    "selectedColor": "green"
+  },
+  "entryPagePath": "pages/index/index",
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "测试程序",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission": {},
+  "lazyCodeLoading": "requiredComponents"
+}

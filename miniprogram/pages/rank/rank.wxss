@@ -1,0 +1,11 @@
+/* pages/rank/rank.wxss */
+.userInfoContainer{
+  padding: 2vh ;
+  border: aqua 1px solid;
+}
+
+.loadmore{
+  text-align: center;
+  background-color: #ccebb4;
+  font-size: 2em;
+}
